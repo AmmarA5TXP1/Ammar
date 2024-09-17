@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+.ele{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+}
+.ele span{
+    color: white;
+    font-size: 35px;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(24, 56, 52);
+    border-radius: 50%;
+    box-shadow: 8px 9px 10px 3px rgba(28, 29, 32, 0.514)
+}
+button{
+margin-top: 20px;
+width: 50px;
+height: 30px;
+border-radius: 5px;
+outline: none;
+border: none;
+background-color: rgb(4, 112, 62);
+color: #fff;
+}
+    </style>
+</head>
+<body>
+    <div class="ele">
+        <span id="span">5</span>
+        <div class="btn">
+            <button id="btn">stop</button>
+            <button id="btn2">start</button>
+        </div>
+    </div>
+    <script>
+        let num = 5;
+   
+    function start(){
+        const span = document.getElementById("span");
+        const btn = document.getElementById("btn");
+        const btn2 = document.getElementById("btn2");
+        //const a= prompt("enter your name")
+      const interval = setInterval(() => {
+            span.textContent=num;
+            if (num===0) {
+                span.textContent="hi";
+            num=5
+            }else{
+              num--;
+            }
+        }, 1000);
+        btn.onclick = ()=>{
+            clearInterval(interval)
+        }
+      
+    }
+    btn2.onclick = ()=>{
+            start();
+        }
+    </script>
+</body>
+</html>
