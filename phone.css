@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colordark: rgb(44, 40, 40);
+    --colorcamera: rgb(80, 76, 68);
+}
+
+.cont {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: silver;
+}
+
+.cont .borderphone {
+    width: 290px;
+    border: 2px solid var(--colordark);
+    height: 510px;
+    border-radius: 30px;
+    box-shadow: inset 0 0px 0px 8px var(--colordark);
+    background-image:url(p.jpg);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.borderphone .cam {
+    width: 150px;
+    height: 26px;
+    background-color: var(--colordark);
+    margin-top: 8px;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cam .divaudio {
+    background-color: var(--colorcamera);
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.cam .camera {
+    width: 10px;
+    height: 10px;
+    background-color: var(--colorcamera);
+    border-radius: 50%;
+}
+
+.borderphone .btnphone {
+    width: 7px;
+    height: 50px;
+    background-color: var(--colorcamera);
+    position: absolute;
+    right: -9px;
+    top: 100px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.borderphone .btnphone2 {
+    width: 6px;
+    height: 30px;
+    background-color: var(--colorcamera);
+    position: absolute;
+    right: -8px;
+    top: 160px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
